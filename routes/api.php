@@ -20,8 +20,9 @@ use App\Http\Controllers\ProductApiController;
 // });
 
 Route::get('/products', [ProductApiController::class, 'index']);
-Route::get('/products/create', [ProductApiController::class, 'create']);
+// Route::get('/products/create', [ProductApiController::class, 'create']);
 Route::post('/products', [ProductApiController::class, 'store']);
-Route::get('/products/{id}/edit', [ProductApiController::class, 'edit']);
+// Route::get('/products/{id}/edit', [ProductApiController::class, 'edit']);
 Route::put('/products/{id}', [ProductApiController::class, 'update']);
 Route::delete('/products/{id}', [ProductApiController::class, 'destroy']);
+Route::get('/products/{id}', [ProductApiController::class, 'show']);
