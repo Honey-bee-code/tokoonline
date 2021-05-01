@@ -1,6 +1,8 @@
+@extends('layouts/app')
+@section('content')
 <h1>Edit Product</h1>
 
-<form action="/products/{{$product->id}}" method="POST">
+<form class="form" action="/products/{{$product->id}}" method="POST">
     @method('PUT')
     @csrf
     Name : <input type="text" name="name" value="{{$product->name}}"><br>
@@ -9,3 +11,5 @@
     Image URL : <input type="text" name="image_url" value="{{$product->image_url}}"><br>
     <input type="submit" value="save">
 </form>
+    
+@endsection
